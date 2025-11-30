@@ -1,0 +1,597 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: My first collection
+meta:
+  id: wrk_e3bede501f2543db92327d22de08cf1c
+  created: 1763512813242
+  modified: 1763512813242
+  description: ""
+collection:
+  - name: test
+    meta:
+      id: fld_f3b1501ac1e6455a939b83792d778022
+      created: 1759482991691
+      modified: 1760540408435
+      sortKey: -1759482991691
+      description: ""
+    children:
+      - name: auth
+        meta:
+          id: fld_5e06b71692cf40778dd912b31c8aa9f2
+          created: 1760962211962
+          modified: 1764341866221
+          sortKey: -1759486200248
+          description: ""
+        children:
+          - url: http://localhost:3000/api/auth/register
+            name: Register
+            meta:
+              id: req_7e2131b4970c41e1b674afb03e64547d
+              created: 1760962220296
+              modified: 1764525407288
+              isPrivate: false
+              description: ""
+              sortKey: -1760962220296
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"username": "testModerator",
+                	"email": "testModerator@gmail.com",
+                	"password": "testModerator"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/auth/login
+            name: Login
+            meta:
+              id: req_6e89c65804fe453daf4ba8affdf028da
+              created: 1763111819431
+              modified: 1764533385693
+              isPrivate: false
+              description: ""
+              sortKey: -1763111819431
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email": "testModerator@gmail.com",
+                	"password": "testModerator"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/auth/me
+            name: Profil
+            meta:
+              id: req_e1ee5f5843cc422d9abe010cec1d43a6
+              created: 1763118120959
+              modified: 1764526877802
+              isPrivate: false
+              description: ""
+              sortKey: -1763118120959
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTJjODU0NDliYjg0YmNkMGJkODNlOTAiLCJpYXQiOjE3NjQ1MjY4NjgsImV4cCI6MTc2NTEzMTY2OH0.JSgHvQKi-GSGqKUa9e5wDTkdjgtHoMAR3wKCUHlWF7U
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/deals
+            name: Create Deal
+            meta:
+              id: req_fb97e30ae7c540949c64501eda248421
+              created: 1763134033416
+              modified: 1764532346591
+              isPrivate: false
+              description: ""
+              sortKey: -1763134033416
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"title": "AnotherLettertestDEAL",
+                	"price": 20,
+                	"description": "descriptionTESTPending",
+                	"category": "Maison"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTJjODUzNDliYjg0YmNkMGJkODNlOGQiLCJpYXQiOjE3NjQ1MzIxODksImV4cCI6MTc2NTEzNjk4OX0.j4lRUVeT1ECrmQKRWJMRDbmnvJaXBZ_lqkBPCpAskFE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/deals
+            name: Get List Approved
+            meta:
+              id: req_2e1c58cc4bc94df2be203efde6743549
+              created: 1763566841315
+              modified: 1764249160614
+              isPrivate: false
+              description: ""
+              sortKey: -1763566841315
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/deals/search?q=another
+            name: Search
+            meta:
+              id: req_6fb4fc6f0b0e4ace8caa46d8e5050442
+              created: 1764248893138
+              modified: 1764532485832
+              isPrivate: false
+              description: ""
+              sortKey: -1764248893138
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/deals/692c8b4466c533726132d272
+            name: Data Id Deal
+            meta:
+              id: req_9b58de2356d440f2bf774a529ece4f05
+              created: 1764249432382
+              modified: 1764532517191
+              isPrivate: false
+              description: ""
+              sortKey: -1764249432382
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/deals/692c8b4466c533726132d272
+            name: Update Deal
+            meta:
+              id: req_a7d17a5aca144a19bafa68e2ae1b3bf4
+              created: 1764250649507
+              modified: 1764532818316
+              isPrivate: false
+              description: ""
+              sortKey: -1764250649507
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "title": "Updated Test 1",
+                  "price": 75,
+                  "description": "Updated description",
+                  "category": "Mode"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTJjODUzNDliYjg0YmNkMGJkODNlOGQiLCJpYXQiOjE3NjQ1MzIxODksImV4cCI6MTc2NTEzNjk4OX0.j4lRUVeT1ECrmQKRWJMRDbmnvJaXBZ_lqkBPCpAskFE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/deals/692ca07c66c533726132d282
+            name: Delete Deal
+            meta:
+              id: req_8a04ae8dd15147a0bc3efe275f00a50f
+              created: 1764252542058
+              modified: 1764532864677
+              isPrivate: false
+              description: ""
+              sortKey: -1764252542058
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTJjODUzNDliYjg0YmNkMGJkODNlOGQiLCJpYXQiOjE3NjQ1MzIxODksImV4cCI6MTc2NTEzNjk4OX0.j4lRUVeT1ECrmQKRWJMRDbmnvJaXBZ_lqkBPCpAskFE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/deals/692c8ae066c533726132d26b/vote
+            name: Voter Deal
+            meta:
+              id: req_5e29c004d086435b8eb61a161d9a64ae
+              created: 1764339727992
+              modified: 1764532996690
+              isPrivate: false
+              description: ""
+              sortKey: -1764339727992
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "type": "cold"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTJjODU0NDliYjg0YmNkMGJkODNlOTAiLCJpYXQiOjE3NjQ1MzI5NTEsImV4cCI6MTc2NTEzNzc1MX0.WPRbBWs7kGRFWgY_rZRkvdQ0HzSWwPThoUV8QAP00Og
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/deals/692c8ae066c533726132d26b/vote
+            name: Delete Vote
+            meta:
+              id: req_a093b6d2fcf24dbe9c93bc87e08211fe
+              created: 1764340488497
+              modified: 1764533054907
+              isPrivate: false
+              description: ""
+              sortKey: -1764340488497
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTJjODU0NDliYjg0YmNkMGJkODNlOTAiLCJpYXQiOjE3NjQ1MzI5NTEsImV4cCI6MTc2NTEzNzc1MX0.WPRbBWs7kGRFWgY_rZRkvdQ0HzSWwPThoUV8QAP00Og
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/deals/692c8ae066c533726132d26b/comments
+            name: List comments of Deal
+            meta:
+              id: req_ca189a4e0539415988b4b179ceeec312
+              created: 1764341306449
+              modified: 1764533152036
+              isPrivate: false
+              description: ""
+              sortKey: -1764341306449
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/deals/692c8ae066c533726132d26b/comments
+            name: Make a Comment
+            meta:
+              id: req_f3c5231d586645c19cb13c04e58888f8
+              created: 1764341513560
+              modified: 1764533125745
+              isPrivate: false
+              description: ""
+              sortKey: -1764341513560
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "content": "This deal comment is a TEST!"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTJjODU0NDliYjg0YmNkMGJkODNlOTAiLCJpYXQiOjE3NjQ1MzI5NTEsImV4cCI6MTc2NTEzNzc1MX0.WPRbBWs7kGRFWgY_rZRkvdQ0HzSWwPThoUV8QAP00Og
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/comments/692ca38666c533726132d2c2
+            name: Update Comment
+            meta:
+              id: req_77ed18f1f87b45a8bb4b0ef675d83937
+              created: 1764341863000
+              modified: 1764533211970
+              isPrivate: false
+              description: ""
+              sortKey: -1764341863000
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "content": "This is the Comment Update Test"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTJjODU0NDliYjg0YmNkMGJkODNlOTAiLCJpYXQiOjE3NjQ1MzI5NTEsImV4cCI6MTc2NTEzNzc1MX0.WPRbBWs7kGRFWgY_rZRkvdQ0HzSWwPThoUV8QAP00Og
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/comments/692ca38666c533726132d2c2
+            name: Delete Comment
+            meta:
+              id: req_00022e2a122b480b872b51cfb0d52d1b
+              created: 1764342115571
+              modified: 1764533248421
+              isPrivate: false
+              description: ""
+              sortKey: -1764342115571
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTJjODU0NDliYjg0YmNkMGJkODNlOTAiLCJpYXQiOjE3NjQ1MzI5NTEsImV4cCI6MTc2NTEzNzc1MX0.WPRbBWs7kGRFWgY_rZRkvdQ0HzSWwPThoUV8QAP00Og
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/admin/deals/pending
+            name: List Pending Deals
+            meta:
+              id: req_e6d9c5790bf84b9298de26a386d91e8c
+              created: 1764345341757
+              modified: 1764532204440
+              isPrivate: false
+              description: ""
+              sortKey: -1764345341757
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTJjODUzNDliYjg0YmNkMGJkODNlOGQiLCJpYXQiOjE3NjQ1MzIxODksImV4cCI6MTc2NTEzNjk4OX0.j4lRUVeT1ECrmQKRWJMRDbmnvJaXBZ_lqkBPCpAskFE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/admin/deals/692ca07c66c533726132d282/moderate
+            name: Approved or Rejected
+            meta:
+              id: req_5b64731ec7604900a584883ffd6d39e8
+              created: 1764346007006
+              modified: 1764532467364
+              isPrivate: false
+              description: ""
+              sortKey: -1764346007006
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "status": "approved"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTJjODUzNDliYjg0YmNkMGJkODNlOGQiLCJpYXQiOjE3NjQ1MzIxODksImV4cCI6MTc2NTEzNjk4OX0.j4lRUVeT1ECrmQKRWJMRDbmnvJaXBZ_lqkBPCpAskFE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/admin/users?page=1&limit=10
+            name: List Users
+            meta:
+              id: req_6311c98c8c5b4d7c9d9c0f97f84c0709
+              created: 1764349877631
+              modified: 1764533293028
+              isPrivate: false
+              description: ""
+              sortKey: -1764349877631
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTJjODUzNDliYjg0YmNkMGJkODNlOGQiLCJpYXQiOjE3NjQ1MzMyODMsImV4cCI6MTc2NTEzODA4M30.Hke-MjaoWZ0IbBLR33qXeJr40A3h4XoO0T2_UQyZ9Mo
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/api/admin/users/692c85449bb84bcd0bd83e90/role
+            name: Update User Role
+            meta:
+              id: req_9f7ab92de82b45be8f39b05e681b0d32
+              created: 1764350047414
+              modified: 1764533416800
+              isPrivate: false
+              description: ""
+              sortKey: -1764350047414
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "role": "moderator"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTJjODU2MTliYjg0YmNkMGJkODNlOTMiLCJpYXQiOjE3NjQ1MzMzODcsImV4cCI6MTc2NTEzODE4N30.Xhd7JMyL9Bj9eHvK55S_Hl4cZ0GkniAVra1ajELtZxc
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_53f1d855356640febbfee40088940ad9
+    created: 1759482834489
+    modified: 1759482834489
+environments:
+  name: Base Environment
+  meta:
+    id: env_4e845e4d2489474194755c853e408022
+    created: 1759482834199
+    modified: 1759482834199
+    isPrivate: false
